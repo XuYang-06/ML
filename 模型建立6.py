@@ -257,7 +257,7 @@ def compute_q(model,GAS,pf_0,t,Beta,M_M,phi_f0,phi_f):
 
     Sigma_C = GAS.Sigma_C()
     D_e = GAS.D_e(P_m)
-    mu_CH4 = GAS.mu_CH4(P_m)
+    mu_CH4 = GAS.Mu_CH4(P_m)
 
     q = Pf_t - (K / (phi_f * mu_CH4)) * Pf_xx - (Sigma_C * D_e / phi_f) * (P_m - Pf) * torch.exp(-Beta * t)
 
